@@ -1,0 +1,52 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RP Flask REST API</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+  
+
+   <div id="map" width="1200" height="380" >
+    </div>
+            
+</body>
+<script>
+
+    var map = L.map('map').setView([51.505, -0.09], 6);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Function to add a marker to the map
+function add_marker(long,lat){
+    L.marker([long, lat]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
+}
+
+
+// Function to draw path between the two markers
+function draw_path(originlong,originlat,destlong,destlat){
+    var latlngs = [
+    [originlong, originlat],
+    [destlong, destlat],
+    ];
+    var polyline = L.polyline(latlngs, {color: '#73A8E6'}).addTo(map);
+    // zoom the map to the polyline
+    map.fitBounds(polyline.getBounds());
+    map.zoomOut(2)
+}
+
+add_marker(40.4983,-3.5676);
+add_marker(49.4545,2.1115);
+draw_path(40.4983,-3.5676,49.4545,2.1115);
+
+
+
+    </script>
+</html>
