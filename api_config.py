@@ -1,4 +1,4 @@
 #API key to access goflightlabs api
 API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiM2VlMjc1MDMxMDJmOGIyMTU2ZjBlNDNjODg2OWFlM2MzZGE2Y2VjMDA2ZmJiYTQ2NjA5ZjZmMGFkZGRiNWQ2MDkwYmE2NzcwMjk2ZWVjMWMiLCJpYXQiOjE2Nzc0MDkxMjEsIm5iZiI6MTY3NzQwOTEyMSwiZXhwIjoxNzA4OTQ1MTIxLCJzdWIiOiIyMDI1OCIsInNjb3BlcyI6W119.ZFxY_-NrQ9jhYcxEqPfsOWYy_44BM5YvFcsyhga30kRLhzOz0riSguEO5q5re7YxRLQWS9O0TS-6dZsXVw45MA'
-#Number of fetched results
+#Number of fetched results, first test with only one result
 MAX_RESULTS = 1
