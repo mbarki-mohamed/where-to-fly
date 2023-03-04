@@ -20,6 +20,8 @@ flight = dict()
 geography = dict()
 speed = dict()
 status = ""
+price = ""
+
 
 def fetch_json_file():
     """ 
