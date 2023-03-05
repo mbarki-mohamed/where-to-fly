@@ -6,4 +6,4 @@ Flask is used as a web app framework to create the front-end as well as the back
 
 Azure sql database will be used as the main database to store the data.
 
-Will use Neo4j as a database engine to store flight data 
+Will use sqlite as a database engine to store flight data with option to push to to cloud.
